@@ -5,6 +5,8 @@ VENDOR="vendor"
 # initialization
 if [ "$1" = "--reinstall" -o "$2" = "--reinstall" ]; then
     rm -rf $VENDOR
+    git submodule update --init
+    exit 0;
 fi
 
 mkdir -p "$VENDOR" 
@@ -56,6 +58,3 @@ add_submodule bundles/Sensio/Bundle/FrameworkExtraBundle git://github.com/sensio
 # SecurityExtraBundle
 add_submodule bundles/JMS/SecurityExtraBundle git://github.com/schmittjoh/SecurityExtraBundle.git
 
-cd ..
-# Update assets
-./app/console assets:install --symlink web/
