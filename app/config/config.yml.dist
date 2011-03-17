@@ -31,9 +31,9 @@ doctrine:
         default_connection: default
         connections:
             default:
-                driver:   ~
-                host:     ~
-                dbname:   ~
+                driver:   pdo_mysql
+                host:     localhost
+                dbname:   symfony_empty
                 user:     ~
                 password: ~
 
@@ -46,8 +46,8 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: ~
-    host:      ~
+    transport: smtp
+    host:      localhost
     username:  ~
     password:  ~
 
