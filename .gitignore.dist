@@ -1,3 +1,4 @@
 web/bundles/
 app/cache/*
 app/logs/*
+app/config/*_local.yml
