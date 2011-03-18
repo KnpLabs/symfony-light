@@ -10,6 +10,7 @@ class AppKernel extends Kernel
         $bundles = array(
             // core bundles
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            //new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\ZendBundle\ZendBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
@@ -17,8 +18,8 @@ class AppKernel extends Kernel
             //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
 
             // extra bundles
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            //new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            //new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
