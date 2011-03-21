@@ -54,7 +54,10 @@ The distribution is configured with the following defaults:
  * Swiftmailer is configured ( see config.yml.dist file );
  * Annotations for everything are enabled ( see config.yml.dist file ).
 
-If you have special configurations depending on your machine or environment, you can override any config_*.yml
+**You don't need to configure anything** by default, as the basic configuration file works out of the box.
+
+If you have special configurations depending on your machine or environment, you can override any config_*.yml.
+
 For example, if you have a different database password than the default one, you can modifiy it by adding a file named `config_dev_local.yml`:
 
     doctrine:
