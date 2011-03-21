@@ -60,6 +60,9 @@ If you have special configurations depending on your machine or environment, you
 
 For example, if you have a different database password than the default one, you can modifiy it by adding a file named `config_dev_local.yml`:
 
+    imports:
+        - { resource: config_dev.yml }
+
     doctrine:
         dbal:
             connections:
