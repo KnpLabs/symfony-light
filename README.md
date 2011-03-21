@@ -25,9 +25,9 @@ Nothing special, just extract and run it!
 
 You can simply download it via `https://github.com/knplabs/symfony-light/tarball/master` and unpack it.
 
-    wget --no-check-certificate https://github.com/knplabs/symfony-light/tarball/master -O master.tar.gz
-    tar -xzvf master.tar.gz
-    mv *-symfony-empty-* my-project
+    wget --no-check-certificate https://github.com/knplabs/symfony-light/tarball/master -O symfony-light-master.tar.gz
+    tar -xzvf symfony-light-master.tar.gz
+    mv *-symfony-light-* my-project
     cd my-project
 
 
@@ -55,7 +55,7 @@ The distribution is configured with the following defaults:
  * Annotations for everything are enabled ( see config.yml.dist file ).
 
 If you have special configurations depending on your machine or environment, you can override any config_*.yml
-For example, if you have a different database password than the default one, you can modifiy by adding a file named `config_dev_local.yml`:
+For example, if you have a different database password than the default one, you can modifiy it by adding a file named `config_dev_local.yml`:
 
     doctrine:
         dbal:
