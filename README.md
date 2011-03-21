@@ -50,8 +50,8 @@ Configuration
 The distribution is configured with the following defaults:
 
  * Twig is the only configured template engine;
- * Doctrine ORM/DBAL is configured ( see config.yml.dist file );
- * Swiftmailer is configured ( see config.yml.dist file );
+ * Doctrine ORM/DBAL is deactivated ( see config.yml.dist file );
+ * Swiftmailer is deactivated ( see config.yml.dist file );
  * Annotations for everything are enabled ( see config.yml.dist file ).
 
 **You don't need to configure anything** by default, as the basic configuration file works out of the box.
