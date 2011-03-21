@@ -1,10 +1,10 @@
-Symfony Empty Edition
+Symfony Light Edition
 =================
 
 What's inside?
 --------------
 
-Symfony Empty Edition comes pre-configured with the following bundles:
+Symfony Light Edition comes pre-configured with the following bundles:
 
  * FrameworkBundle
  * SecurityBundle ( see security.yml.dist file )
@@ -23,9 +23,9 @@ Installation
 This distribution is made to be extracted in an empty git repository, in order to initiate a new Symfony2 project.
 Nothing special, just extract and run it!
 
-You can simply download it via `https://github.com/docteurklein/symfony-empty/tarball/master` and unpack it.
+You can simply download it via `https://github.com/knplabs/symfony-light/tarball/master` and unpack it.
 
-    wget --no-check-certificate https://github.com/docteurklein/symfony-empty/tarball/master -O master.tar.gz
+    wget --no-check-certificate https://github.com/knplabs/symfony-light/tarball/master -O master.tar.gz
     tar -xzvf master.tar.gz
     mv *-symfony-empty-* my-project
     cd my-project
@@ -61,7 +61,7 @@ For example, if you have a different database password than the default one, you
         dbal:
             connections:
                 default:
-                    dbname:        my_symfony_empty_special_db_name
+                    dbname:        my_symfony_light_special_db_name
                     user:             florian
                     password:     chaaaangeMe
 
