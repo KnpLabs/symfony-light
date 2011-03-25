@@ -14,14 +14,20 @@ mkdir -p "$VENDOR"
 ##
 # @param destination directory (e.g. "doctrine")
 # @param URL of the git remote (e.g. git://github.com/doctrine/doctrine2.git)
+# @param hash or tag of a specific commit (e.g. "vPR8")
 #
 add_submodule()
 {
     INSTALL_DIR=$1
     SOURCE_URL=$2
+    HASH=$3
 
     if [ ! -d $INSTALL_DIR ]; then
         git submodule add $SOURCE_URL $VENDOR/$INSTALL_DIR
+        if [ -n $HASH ]; then
+           cd $VENDOR/$INSTALL_DIR
+           git checkout $HASH
+        fi
     fi
 }
 
@@ -53,7 +59,7 @@ add_submodule twig-extensions git://github.com/fabpot/Twig-extensions.git
 add_submodule zend-log/Zend/Log git://github.com/symfony/zend-log.git
 
 # FrameworkExtraBundle
-add_submodule bundles/Sensio/Bundle/FrameworkExtraBundle git://github.com/sensio/FrameworkExtraBundle.git
+add_submodule bundles/Sensio/Bundle/FrameworkExtraBundle git://github.com/sensio/SensioFrameworkExtraBundle.git
 
 # SecurityExtraBundle
 add_submodule bundles/JMS/SecurityExtraBundle git://github.com/schmittjoh/SecurityExtraBundle.git
