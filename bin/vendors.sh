@@ -3,7 +3,6 @@
 # Get root directory
 cd $(dirname $0)/..
 ROOT_PATH=$(pwd)
-echo $ROOT_PATH
 VENDOR_DIR='vendor'
 VENDOR_PATH="$ROOT_PATH/$VENDOR_DIR"
 
@@ -71,3 +70,6 @@ add_submodule bundles/Sensio/Bundle/FrameworkExtraBundle git://github.com/sensio
 # SecurityExtraBundle
 add_submodule bundles/JMS/SecurityExtraBundle git://github.com/schmittjoh/SecurityExtraBundle.git
 
+# Update submodules recursively
+cd $ROOT_PATH
+git submodule update --init --recursive
