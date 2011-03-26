@@ -1,15 +1,19 @@
 #!/bin/sh
 
-VENDOR="vendor"
+# Get root directory
+cd $(dirname $0)/..
+ROOT_DIR=$(pwd)
+echo $ROOT_DIR
+VENDOR_DIR="$ROOT_DIR/vendor"
 
 # initialization
 if [ "$1" = "--reinstall" -o "$2" = "--reinstall" ]; then
-    rm -rf $VENDOR
+    rm -rf $VENDOR_DIR
     git submodule update --init
     exit 0;
 fi
 
-mkdir -p "$VENDOR" 
+mkdir -p "$VENDOR_DIR" 
 
 ##
 # @param destination directory (e.g. "doctrine")
@@ -18,14 +22,15 @@ mkdir -p "$VENDOR"
 #
 add_submodule()
 {
-    INSTALL_DIR=$1
+    INSTALL_DIR=$VENDOR_DIR/$1
     SOURCE_URL=$2
     HASH=$3
-
+    cd $ROOT_DIR
+    
     if [ ! -d $INSTALL_DIR ]; then
-        git submodule add $SOURCE_URL $VENDOR/$INSTALL_DIR
+        git submodule add $SOURCE_URL $INSTALL_DIR
         if [ -n $HASH ]; then
-           cd $VENDOR/$INSTALL_DIR
+           cd $INSTALL_DIR
            git checkout $HASH
         fi
     fi
