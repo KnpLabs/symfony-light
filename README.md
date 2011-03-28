@@ -63,7 +63,7 @@ The distribution is configured with the following defaults:
 
 
 Custom config
-~~~~~~~~~~~
+---------------------
 
 If you have special configurations depending on your machine or environment, you can override any config_*.yml.
 
