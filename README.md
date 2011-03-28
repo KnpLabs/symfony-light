@@ -30,6 +30,8 @@ You can simply download it via `https://github.com/knplabs/symfony-light/tarball
     mv *-symfony-light-* my-project
     cd my-project
 
+Vendors, or how to use submodules
+----------------------------------------------------
 
 **This requires you to be in a working git repository, at root level.**
 If you are not, you can init a new repository in the current folder by simply typing:
@@ -42,10 +44,13 @@ Run the following script:
 
 It will install all submodules.
 
+This script automates the creation of submodules, but you still can do it manually via:
+
+    git submodule add <git url> vendor/<vendor name>
 
 
 Configuration
--------------
+-------------------
 
 The distribution is configured with the following defaults:
 
@@ -55,6 +60,10 @@ The distribution is configured with the following defaults:
  * Annotations for everything are enabled ( see config.yml.dist file ).
 
 **You don't need to configure anything** by default, as the basic configuration file works out of the box.
+
+
+Custom config
+~~~~~~~~~~~
 
 If you have special configurations depending on your machine or environment, you can override any config_*.yml.
 
@@ -67,9 +76,9 @@ For example, if you have a different database password than the default one, you
         dbal:
             connections:
                 default:
-                    dbname:        my_symfony_light_special_db_name
-                    user:             florian
-                    password:     chaaaangeMe
+                    dbname: my_symfony_light_special_db_name
+                    user: florian
+                    password: chaaaangeMe
 
 
 If you want to use the CLI, a console application is available at
