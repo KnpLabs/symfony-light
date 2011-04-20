@@ -37,11 +37,14 @@ add_submodule()
     fi
 }
 
-# Assetic
-add_submodule assetic git://github.com/kriswallsmith/assetic.git
-
 # Symfony
 add_submodule symfony git://github.com/symfony/symfony.git
+
+#monolog
+add_submodule monolog git://github.com/Seldaek/monolog.git
+
+# Assetic
+add_submodule assetic git://github.com/kriswallsmith/assetic.git
 
 # Doctrine ORM
 add_submodule doctrine git://github.com/doctrine/doctrine2.git
@@ -70,6 +73,4 @@ add_submodule bundles/Sensio/Bundle/FrameworkExtraBundle git://github.com/sensio
 # SecurityExtraBundle
 add_submodule bundles/JMS/SecurityExtraBundle git://github.com/schmittjoh/SecurityExtraBundle.git
 
-# Update submodules recursively
 cd $ROOT_PATH
-git submodule update --init --recursive
