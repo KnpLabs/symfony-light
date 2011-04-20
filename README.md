@@ -1,5 +1,5 @@
 Symfony Light Edition
-=================
+=====================
 
 What's inside?
 --------------
@@ -13,12 +13,12 @@ Symfony Light Edition comes pre-configured with the following bundles:
  * DoctrineBundle ( see config.yml.dist file )
  * TwigBundle
  * SwiftmailerBundle ( see config.yml.dist file )
- * ZendBundle
+ * MonologBundle
  * AsseticBundle
  * WebProfilerBundle (in dev/test env)
 
 Installation
----------------------
+------------
 
 This distribution is made to be extracted in an empty git repository, in order to initiate a new Symfony2 project.
 Nothing special, just extract and run it!
@@ -31,7 +31,7 @@ You can simply download it via `https://github.com/knplabs/symfony-light/tarball
     cd my-project
 
 Vendors, or how to use submodules
-----------------------------------------------------
+---------------------------------
 
 **This requires you to be in a working git repository, at root level.**
 If you are not, you can init a new repository in the current folder by simply typing:
@@ -42,15 +42,22 @@ Run the following script:
 
  * `./bin/vendors.sh`
 
-It will install all submodules.
+It will install **all** submodules.
 
 This script automates the creation of submodules, but you still can do it manually via:
 
     git submodule add <git url> vendor/<vendor name>
 
 
+Last but not least, setup assets using:
+
+    ./app/console assets:install web --symlink
+
+
 Configuration
--------------------
+-------------
+
+**You don't need to configure anything** by default, as the basic configuration file works out of the box.
 
 The distribution is configured with the following defaults:
 
@@ -59,11 +66,9 @@ The distribution is configured with the following defaults:
  * Swiftmailer is deactivated ( see config.yml.dist file );
  * Annotations for everything are enabled ( see config.yml.dist file ).
 
-**You don't need to configure anything** by default, as the basic configuration file works out of the box.
-
 
 Custom config
----------------------
+-------------
 
 If you have special configurations depending on your machine or environment, you can override any config_*.yml.
 
