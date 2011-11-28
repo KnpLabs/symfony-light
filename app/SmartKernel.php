@@ -73,6 +73,11 @@ abstract class SmartKernel extends Kernel
         return $bundles;
     }
 
+    protected function getExcludedBundlesByEnv()
+    {
+        return array();
+    }
+
     protected function getFinalExcludedBundles()
     {
         $env = $this->getEnvironment();
