@@ -7,13 +7,15 @@ What's inside?
 Symfony Light Edition comes pre-configured with the following bundles:
 
  * FrameworkBundle
+ * MonologBundle
+ * TwigBundle
+
+Optionally:
  * SecurityBundle ( see security.yml.dist file )
  * SensioFrameworkExtraBundle
  * SecurityExtraBundle ( see config.yml.dist file )
  * DoctrineBundle ( see config.yml.dist file )
- * TwigBundle
  * SwiftmailerBundle ( see config.yml.dist file )
- * MonologBundle
  * AsseticBundle
  * WebProfilerBundle (in dev/test env)
 
@@ -40,9 +42,10 @@ If you are not, you can init a new repository in the current folder by simply ty
 
 Run the following script:
 
- * `./bin/vendors.sh`
+ * `./bin/init-submodule.sh [.gitmodules.dist] [1]
 
-It will install **all** submodules.
+   * [.gitmodules.dist] is a gitmodule file containing all needed vendors. If ommited, ``.gitmodules.dist`` is used
+   * [1] is the git clone depth to limit history, and thus, filesystem size of vendors. If ommited, all history will be cloned
 
 This script automates the creation of submodules, but you still can do it manually via:
 
@@ -87,7 +90,6 @@ For example, if you have a different database password than the default one, you
 
 
 If you want to use the CLI, a console application is available at
-`app/console`. Check first that your PHP is correctly configured for the CLI
-by running `app/check.php`.
+`app/console`. 
 
 Enjoy!
