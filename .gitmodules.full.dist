@@ -1,0 +1,66 @@
+[submodule "vendor/symfony"]
+	path = vendor/symfony
+	url = git://github.com/symfony/symfony.git
+[submodule "vendor/monolog"]
+	path = vendor/monolog
+	url = git://github.com/Seldaek/monolog.git
+[submodule "vendor/assetic"]
+	path = vendor/assetic
+	url = git://github.com/kriswallsmith/assetic.git
+[submodule "vendor/doctrine-common"]
+	path = vendor/doctrine-common
+	url = git://github.com/doctrine/common.git
+[submodule "vendor/twig"]
+	path = vendor/twig
+	url = git://github.com/fabpot/Twig.git
+[submodule "vendor/twig-extensions"]
+	path = vendor/twig-extensions
+	url = git://github.com/fabpot/Twig-extensions.git
+[submodule "vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle"]
+	path = vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle
+	url = git://github.com/symfony/DoctrineMongoDBBundle.git
+[submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
+	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
+	url = git://github.com/sensio/SensioFrameworkExtraBundle.git
+[submodule "vendor/gedmo-doctrine-extensions"]
+	path = vendor/gedmo-doctrine-extensions
+	url = git://github.com/l3pp4rd/DoctrineExtensions.git
+[submodule "vendor/doctrine-mongodb-odm"]
+	path = vendor/doctrine-mongodb-odm
+	url = git://github.com/doctrine/mongodb-odm.git
+[submodule "vendor/doctrine-mongodb"]
+	path = vendor/doctrine-mongodb
+	url = git://github.com/doctrine/mongodb.git
+[submodule "vendor/Behat/BehatBundle"]
+	path = vendor/Behat/BehatBundle
+	url = git://github.com/Behat/BehatBundle.git
+[submodule "vendor/Behat/Gherkin"]
+	path = vendor/Behat/Gherkin
+	url = git://github.com/Behat/Gherkin.git
+[submodule "vendor/Behat/Behat"]
+	path = vendor/Behat/Behat
+	url = git://github.com/Behat/Behat.git
+[submodule "vendor/Behat/Mink"]
+	path = vendor/Behat/Mink
+	url = git://github.com/Behat/Mink.git
+[submodule "vendor/Behat/MinkBundle"]
+	path = vendor/Behat/MinkBundle
+	url = git://github.com/Behat/MinkBundle.git
+[submodule "vendor/Behat/SahiClient"]
+	path = vendor/Behat/SahiClient
+	url = git://github.com/Behat/SahiClient.git
+[submodule "vendor/Buzz"]
+	path = vendor/Buzz
+	url = git://github.com/kriswallsmith/Buzz.git
+[submodule "vendor/bundles/Symfony/Bundle/DoctrineFixturesBundle"]
+	path = vendor/bundles/Symfony/Bundle/DoctrineFixturesBundle
+	url = git://github.com/symfony/DoctrineFixturesBundle.git
+[submodule "vendor/doctrine-data-fixtures"]
+	path = vendor/doctrine-data-fixtures
+	url = git://github.com/doctrine/data-fixtures.git
+[submodule "vendor/bundles/Stof/DoctrineExtensionsBundle"]
+	path = vendor/bundles/Stof/DoctrineExtensionsBundle
+	url = git://github.com/stof/StofDoctrineExtensionsBundle.git
+[submodule "vendor/bundles/Symfony/Bundle/AsseticBundle"]
+	path = vendor/bundles/Symfony/Bundle/AsseticBundle
+	url = git://github.com/symfony/AsseticBundle.git
