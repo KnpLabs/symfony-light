@@ -21,3 +21,6 @@ $loader->registerPrefixes(array(
     //'Swift_'           => __DIR__.'/../vendor/swiftmailer/lib/classes',
 ));
 $loader->register();
+
+require_once __DIR__.'/GlobRoutingLoader.php';
+require_once __DIR__.'/GlobLocator.php';
