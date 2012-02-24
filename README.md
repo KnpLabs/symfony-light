@@ -79,6 +79,9 @@ Default structure allows you to write controllers and views directly in the `src
 You can import any number of translation files that are in `src/translation` folder.  
 You can import any number of validation files that are in `src/validation` folder.  
 
+**Nota-bene**: Nothing forces you to use this structure! You still can use and create any number of bundles you want.  
+
+
 
 Configuration
 -------------
