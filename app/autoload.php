@@ -7,7 +7,9 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
     'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
+    'Knp'              => array(__DIR__.'/../vendor/knp-component'),
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
+    'Controller'       => __DIR__.'/../src',
     //'Assetic'          => __DIR__.'/../vendor/assetic/src',
     //'Sensio'           => __DIR__.'/../vendor/bundles',
     //'JMS'              => __DIR__.'/../vendor/bundles',
@@ -22,5 +24,3 @@ $loader->registerPrefixes(array(
 ));
 $loader->register();
 
-require_once __DIR__.'/GlobRoutingLoader.php';
-require_once __DIR__.'/GlobLocator.php';

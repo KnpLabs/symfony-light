@@ -1,5 +1,7 @@
 <?php
 
+namespace Knp\Component\Config;
+
 use Symfony\Component\Config\FileLocatorInterface;
 
 /*
@@ -19,15 +21,17 @@ use Symfony\Component\Config\FileLocatorInterface;
 class GlobLocator implements FileLocatorInterface
 {
     protected $paths;
+    protected $mask;
 
     /**
      * Constructor.
      *
      * @param string|array $paths A path or an array of paths where to look for resources
      */
-    public function __construct($paths = array())
+    public function __construct($paths = array(), $onlyDirs = true)
     {
         $this->paths = (array) $paths;
+        $this->mask = $onlyDirs ? GLOB_ONLYDIR | GLOB_BRACE : GLOB_BRACE;
     }
 
     /**
@@ -46,7 +50,7 @@ class GlobLocator implements FileLocatorInterface
     {
         $dirs = array();
         foreach ($this->paths as $path) {
-            if (false !== ($d = glob($path.DIRECTORY_SEPARATOR.$glob, GLOB_ONLYDIR | GLOB_BRACE))) {
+            if (false !== ($d = glob($path.DIRECTORY_SEPARATOR.$glob, $this->mask))) {
                 $dirs = array_merge($dirs, $d);
             }
         }

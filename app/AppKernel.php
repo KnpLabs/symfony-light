@@ -1,11 +1,12 @@
 <?php
 
-require_once __DIR__.'/SmartKernel.php';
-
+use Knp\Component\Kernel\SmartKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends SmartKernel
 {
+    protected $rootDir = __DIR__;
+
     protected function getExcludedBundles()
     {
         $bundles = parent::getExcludedBundles();

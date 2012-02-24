@@ -1,11 +1,14 @@
 <?php
 
+namespace Knp\Component\Routing\Loader;
+
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
+use Knp\Component\Config\GlobLocator;
 
 /**
  * GlobRoutingLoader loads routing information from all routing files found wityh glob pattern

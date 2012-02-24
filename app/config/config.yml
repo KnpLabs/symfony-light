@@ -1,16 +1,4 @@
 
-services:
-    routing.loader.glob:
-        class: GlobRoutingLoader
-        arguments: [ @controller_name_converter, @locator.glob, @routing.resolver ]
-        tags:
-            - { name: routing.loader }
-
-    locator.glob:
-        class: GlobLocator
-        arguments: [ %kernel.root_dir% ]
-
-
 framework:
     charset:       UTF-8
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -20,6 +8,7 @@ framework:
         lifetime:       3600
         auto_start:     true
     secret: xxxxxxxxx # you may change it
+    translator: ~
 
 # Twig Configuration
 twig:
