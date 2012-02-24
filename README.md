@@ -11,6 +11,7 @@ Symfony Light Edition comes pre-configured with the following bundles:
  * TwigBundle
 
 Optionally:
+
  * SecurityBundle ( see security.yml.dist file )
  * SensioFrameworkExtraBundle
  * SecurityExtraBundle ( see config.yml.dist file )
@@ -62,12 +63,21 @@ Smart
 
 This provides a SmartKernel that autodetects installed bundles and registered them in a cachy way.
 
-It also includes a GlobRoutingLoader that imports all routing files given a glob pattern:
+It also includes a `GlobRoutingLoader` that imports all routing files given a glob pattern:
 
     #routing.yml
 
     vendors:
         resource: ../vendor/bundles/FOS/*
+
+
+Simple
+------
+
+Default structure allows you to write controllers and views directly in the `src/` and `src/views` folder.  
+
+You can import any number of translation files that are in `src/translation` folder.  
+You can import any number of validation files that are in `src/validation` folder.  
 
 
 Configuration
