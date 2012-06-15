@@ -11,6 +11,7 @@ Symfony Light Edition comes pre-configured with the following bundles:
  * TwigBundle
 
 Optionally:
+
  * SecurityBundle ( see security.yml.dist file )
  * SensioFrameworkExtraBundle
  * SecurityExtraBundle ( see config.yml.dist file )
