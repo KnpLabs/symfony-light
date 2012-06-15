@@ -57,6 +57,19 @@ Last but not least, setup assets using:
     ./app/console assets:install web --symlink
 
 
+Smart
+-----
+
+This provides a SmartKernel that autodetects installed bundles and registered them in a cachy way.
+
+It also includes a GlobRoutingLoader that imports all routing files given a glob pattern:
+
+    #routing.yml
+
+    vendors:
+        resource: ../vendor/bundles/FOS/*
+
+
 Configuration
 -------------
 

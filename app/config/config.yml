@@ -1,4 +1,16 @@
 
+services:
+    routing.loader.glob:
+        class: GlobRoutingLoader
+        arguments: [ @controller_name_converter, @locator.glob, @routing.resolver ]
+        tags:
+            - { name: routing.loader }
+
+    locator.glob:
+        class: GlobLocator
+        arguments: [ %kernel.root_dir% ]
+
+
 framework:
     charset:       UTF-8
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
