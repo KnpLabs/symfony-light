@@ -1,30 +1,25 @@
 <?php
 
-use Symfony\Component\HttpKernel\Kernel;
+use Knp\Component\Kernel\SmartKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
-class AppKernel extends Kernel
+class AppKernel extends SmartKernel
 {
-    public function registerBundles()
+    protected $rootDir = __DIR__;
+
+    protected function getExcludedBundles()
     {
-        $bundles = array(
-            // core bundles
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Symfony\Bundle\MonologBundle\MonologBundle(),
-            new Symfony\Bundle\TwigBundle\TwigBundle(),
-            //new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            //new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            //new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-            //new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
+        $bundles = parent::getExcludedBundles();
+        $bundles[] = 'Symfony/Bundle/DoctrineBundle';
 
-            // extra bundles
-            //new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            //new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-        );
+        return $bundles;
+    }
 
-        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-        }
+    protected function getExcludedBundlesByEnv()
+    {
+        $excluded = $this->getExcludedBundles();
+        $excluded[] = 'Symfony/Bundle/WebProfilerBundle';
+        $bundles['prod'] = $excluded;
 
         return $bundles;
     }

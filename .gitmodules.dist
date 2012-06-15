@@ -10,3 +10,7 @@
 	path = vendor/twig
 	url = git://github.com/fabpot/Twig.git
 	version = master
+[submodule "vendor/bundles/Symfony/Bundle/MonologBundle"]
+	path = vendor/bundles/Symfony/Bundle/MonologBundle
+	url = git://github.com/symfony/MonologBundle.git
+	version = master

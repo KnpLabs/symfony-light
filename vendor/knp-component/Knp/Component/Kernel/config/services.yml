@@ -1,0 +1,11 @@
+
+services:
+    routing.loader.glob:
+        class: Knp\Component\Routing\Loader\GlobRoutingLoader
+        arguments: [ @controller_name_converter, @locator.glob, @routing.resolver ]
+        tags:
+            - { name: routing.loader }
+
+    locator.glob:
+        class: Knp\Component\Config\GlobLocator
+        arguments: [ %kernel.root_dir% ]

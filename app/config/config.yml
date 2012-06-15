@@ -8,6 +8,7 @@ framework:
         lifetime:       3600
         auto_start:     true
     secret: xxxxxxxxx # you may change it
+    translator: ~
 
 # Twig Configuration
 twig:
